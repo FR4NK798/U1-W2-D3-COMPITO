@@ -177,10 +177,13 @@ const starWarsCharacters = [
   console.log("Esercizio 6");
   let crewMass = 0;
   let contatore = 0;
+//   const peso = 0;
   
   console.log("crew mass prima: ", crewMass);
   while(contatore < starWarsCharacters.length){
-    crewMass =+starWarsCharacters[contatore].mass;
+    const peso = starWarsCharacters[contatore].mass;
+    crewMass += peso;
+    // peso = peso + starWarsCharacters[contatore].mass;
     contatore++;
   }
   console.log("crew mass dopo: ", crewMass);
@@ -215,13 +218,23 @@ if(crewMass < 500){
   */
 
     let foundGender = [];
-// for (let i = 0; i < starWarsCharacters.length; i++) {
-//   if (starWarsCharacters[i] === "n/a") {
-//     foundGender = i;
-//   }
-// }
+
 console.log(foundGender);
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const nuovooggettodentrofor = starWarsCharacters[i];
+  const gender = nuovooggettodentrofor.gender;
+   if (nuovooggettodentrofor.gender === "n/a") {
+    //  animalObj.wild = true;
+    foundGender.push(gender);
+
+   }
+  //  } else {
+    //  animalObj.wild = false;
+  //  }
+  // names.push(name);
+  // console.log(name);
+}
 
   console.log(foundGender)
   
